@@ -231,6 +231,12 @@
       clearTimeout(timer);
     });
 
+    // Faz o botão "Não" fugir ao toque em celulares
+      naoButton.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      moverBotaoNao();
+    });
+    
     // Move o botão "Não" ao passar o cursor próximo
     document.addEventListener('mousemove', (e) => {
       const naoButtonRect = naoButton.getBoundingClientRect();
